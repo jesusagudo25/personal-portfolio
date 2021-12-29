@@ -1,0 +1,608 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    /* La propiedad de comportamiento de desplazamiento especifica si se debe animar suavemente la posición de desplazamiento, 
+    en lugar de un salto directo, cuando el usuario hace clic en un enlace dentro de un cuadro desplazable. */
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    max-width: 100em;
+    margin: auto;
+    display: flex;
+}
+
+/* Header */
+
+header{
+    background-image: linear-gradient(120deg, rgba(123, 127, 190, 0.699) 0%, rgba(47, 170, 202, 0.692) 100%), url("../img/header.jpg");
+
+    height: 650px;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+header .contenedor{
+    height: 80%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Efecto */
+header .contenedor h1, header .contenedor p, header .contenedor figure{
+    animation: efecto 3s ease;
+}
+
+header .contenedor h1{
+    font-size: 6em;
+    margin-bottom: 2rem;
+}
+
+header .contenedor p{
+    font-size: 3em;
+    margin-bottom: 2rem;
+}
+
+header .contenedor figure{
+    width: 13em;
+    margin-bottom: 2rem;
+}
+
+header .contenedor figure img{
+    vertical-align: top;
+    width: 100%;
+    border-radius: 100%;
+    opacity: 0.8;
+
+}
+
+header .wave-header{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* -----------------------------------Main->>>>>>>>>>>>>>>>>>>>>>>> */
+
+/* Sobre mi */
+main .sobremi {
+    padding-top: 6em;
+    padding-bottom: 4em;
+}
+main .sobremi .contenedor{
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .sobremi .contenedor figure{
+    width: 45%;
+}
+
+main .sobremi .contenedor figure img{
+    width: 100%;
+    vertical-align: top;
+}
+
+main .sobremi .contenedor .descripcion{
+    width: 40%;
+}
+
+main .sobremi .contenedor .descripcion h2{
+    font-size: 3em;
+    margin-bottom: 2rem;
+}
+
+main .sobremi .contenedor .descripcion h4{
+    font-size: 2.1em;
+    margin-bottom: 2rem;
+}
+
+main .sobremi .contenedor .descripcion p{
+    font-size: 1.8em;
+    margin-bottom: 2rem;
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+main .sobremi .contenedor .descripcion a{
+    display: inline-block;
+    font-size: 1.6em;
+    padding: 1.5rem 2rem;
+    background: linear-gradient(120deg, rgba(123, 127, 190, 0.699) 0%, rgba(47, 170, 202, 0.692) 100%);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+main .sobremi .contenedor .descripcion a:hover{
+    background: linear-gradient(120deg, rgba(123, 127, 190, 0.9) 0%, rgba(47, 170, 202, 0.9) 100%);
+}
+/* Mensaje */
+
+main .mensaje{
+    padding: 6em 0;
+    background-color: rgb(47, 170, 202);
+}
+
+main .mensaje .contenedor{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+}
+
+main .mensaje .contenedor h2{
+    font-size: 3em;
+    margin-bottom: 2rem;
+}
+
+main .mensaje .contenedor p{
+    font-size: 1.8em;
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+/* Skills */
+
+main .skills{
+    padding: 6em 0;
+}
+
+main .skills .contenedor{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .skills .contenedor h2{
+    font-size: 3em;
+    margin-bottom: 4rem;
+}
+
+main .skills .contenedor .contenedor-skills{
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+
+main .skills .contenedor .contenedor-skills article{
+    width: 30%;
+    height: 30em;
+    text-align: center;
+    padding: 2rem;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5); /*debes estudiar estas cosas */
+    /* transform: scale(1); */
+    transition: transform 0.6s ease;
+}
+
+main .skills .contenedor .contenedor-skills article:hover{
+    transform: scale(1.1);
+    /* Podria ser 1.03... */
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+main .skills .contenedor .contenedor-skills article i{
+    font-size: 5em;
+    margin-bottom: 2rem;
+    color: rgb(123, 127, 190);
+}
+
+main .skills .contenedor .contenedor-skills article h3{
+    font-size: 2em;
+    margin-bottom: 2rem;
+}
+
+main .skills .contenedor .contenedor-skills article p{
+    font-size: 1.8em;
+}
+
+/* Portafolio */
+
+main .portafolio{
+    background: #f2f2f2;
+    padding: 6em 0;
+}
+
+main .portafolio .contenedor{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .portafolio .contenedor h2{
+    font-size: 3em;
+    margin-bottom: 4rem;
+}
+
+main .portafolio .contenedor .contenedor-trabajos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .portafolio .contenedor .contenedor-trabajos figure{
+    width: 32%;
+    height: 21em;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+main .portafolio .contenedor .contenedor-trabajos figure img{
+    vertical-align: top;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+main .portafolio .contenedor .contenedor-trabajos figure .efecto{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* top: 0; */
+    background-color: hsla(192, 62%, 49%, 0.479);
+    height: 0;
+    overflow: hidden;
+    transition: height .5s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+main .portafolio .contenedor .contenedor-trabajos figure .efecto a{
+    text-decoration: none;
+    color: white;
+}
+main .portafolio .contenedor .contenedor-trabajos figure .efecto a i{
+    font-size: 5em;
+}
+
+main .portafolio .contenedor .contenedor-trabajos figure:hover .efecto{
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Opinion */
+
+main .opinion{
+    padding-top: 6em;
+    /* position: relative; */
+}
+
+main .opinion .contenedor{
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .opinion .contenedor figure{
+    width: 45%;
+}
+
+main .opinion .contenedor figure img{
+    width: 100%;
+    vertical-align: top;
+}
+
+main .opinion .contenedor .comentario{
+    width: 40%;
+}
+
+main .opinion .contenedor .comentario h2{
+    font-size: 3em;
+    margin-bottom: 2rem;
+}
+
+main .opinion .contenedor .comentario h4{
+    font-size: 2.0em;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+main .opinion .contenedor .comentario h5{
+    font-size: 1.9em;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+main .opinion .contenedor .comentario p{
+    font-size: 1.8em;
+    margin-bottom: 2rem;
+    text-align: justify;
+    line-height: 2.5rem;
+}
+
+/* main .opinion .wave-opinion{
+    A este wave entonces no le aplica ningun estilo...
+} */
+
+/* Footer */
+
+footer{
+    background-color: #7b7fbe;
+    padding: 6em 0 4em 0;
+}
+
+footer .contenedor{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .contenedor h2{
+    font-size: 3em;
+    color: white;
+    margin-bottom: 4rem;
+}
+
+footer .contenedor .redes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 4rem;
+}
+
+footer .contenedor .redes a{
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 1.5em 2em;
+    border-radius: 5px;
+    transition: all .5s ease;
+    width: 7%;
+}
+
+footer .contenedor .redes a:hover{
+    background-color: rgb(47, 170, 202);
+}
+
+footer .contenedor .redes a i{
+    font-size: 3em;
+}
+
+footer .contenedor form{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .contenedor form input[type="text"], footer .contenedor form input[type="email"]{
+    width: 49%;
+}
+
+footer .contenedor form input[type="text"], footer .contenedor form input[type="email"],
+footer .contenedor  textarea{
+    outline: none;
+    font-size: 1.8em;
+    padding: 2rem;
+    border: 1px solid rgb(47, 170, 202);
+    border-radius: 3px;
+    margin-bottom: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(47, 170, 202);
+}
+
+footer .contenedor textarea{
+    min-height: 12rem;
+    max-height: 17rem;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+::placeholder{
+    color: rgb(47, 170, 202);
+}
+
+footer .contenedor input[type="submit"]{
+    display: block;
+    margin: auto;
+    padding: 2rem 2.3rem;
+    background-color: white;
+    color: rgb(47, 170, 202);
+    border: 1px solid rgb(47, 170, 202);
+    border-radius: 5px;
+    font-size: 1.8em;
+    font-family: 'Raleway', sans-serif;
+}
+
+footer .contenedor input[type="submit"]:hover{
+    background-color: rgb(47, 170, 202);
+    color: white;
+}
+
+/* @keyframes header */
+
+@keyframes efecto{
+    0%{opacity: 0; transform: translateY(-2em);}
+    100%{opacity: 1;}
+}
+
+/* MediaQueries */
+
+@media screen and (max-width: 768px){
+
+    main .portafolio .contenedor .contenedor-trabajos{
+        justify-content: space-evenly;
+    }
+    
+    main .skills .contenedor .contenedor-skills article{
+        width: 31%;
+    }
+
+    main .portafolio .contenedor .contenedor-trabajos figure{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 425px){
+
+    /* Header */
+    header .contenedor h1{
+        font-size: 4em;
+    }
+
+    header .contenedor p{
+        font-size: 2em;
+    }
+
+    header .contenedor figure{
+        width: 12em;
+    }
+
+    /* sobremi */
+
+    main .sobremi .contenedor{
+        flex-direction: column;
+    }
+
+    main .sobremi .contenedor figure{
+        width: 70%;
+        margin-bottom: 3em;
+    }
+
+    main .sobremi .contenedor .descripcion{
+        width: 100%;
+    }
+
+    /* Skills */
+
+    main .skills .contenedor .contenedor-skills{
+        flex-direction: column;
+    }
+
+    main .skills .contenedor .contenedor-skills article{
+        width: 70%;
+    }
+
+    main .skills .contenedor .contenedor-skills article{
+        margin-bottom: 2em;
+    }
+
+    /* Portafolio */
+
+    main .portafolio .contenedor .contenedor-trabajos{
+        flex-direction: column
+    }
+
+    main .portafolio .contenedor .contenedor-trabajos figure{
+        width: 70%;
+    }
+
+    /* Opinion */
+
+    main .opinion .contenedor{
+        flex-direction: column;
+    }
+
+    main .opinion .contenedor .comentario{
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    main .opinion .contenedor figure{
+        width: 70%;
+    }
+
+    /* Footer */
+    
+    footer .contenedor form{
+        flex-direction: column;
+    }
+
+    footer .contenedor form input[type="text"], footer .contenedor form input[type="email"] {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    
+    html{
+        font-size: 58%;
+    }
+
+    /* Header */
+    header .contenedor h1{
+        font-size: 3.7em;
+    }
+
+    /* Sobremi */
+    main .sobremi .contenedor figure{
+        width: 75%;
+    }
+
+    /* Skills */
+    main .skills .contenedor .contenedor-skills article{
+        width: 80%;
+    }
+
+    /* Portafolio */
+    main .portafolio .contenedor .contenedor-trabajos figure{
+        width: 80%;
+    }
+
+    /* opinion */
+    main .opinion .contenedor figure{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 320px){
+
+    html{
+        font-size: 57%;
+    }
+
+        /* Header */
+    header .contenedor h1{
+        font-size: 3.3em;
+    }
+
+    header .contenedor p{
+        font-size: 1.9em;
+    }
+
+    /* Sobremi */
+    main .sobremi .contenedor figure{
+        width: 80%;
+    }
+
+    /* Skills */
+    main .skills .contenedor .contenedor-skills article{
+        width: 85%;
+    }
+
+    /* Portafolio */
+    main .portafolio .contenedor .contenedor-trabajos figure{
+        width: 90%;
+    }
+
+    /* opinion */
+    main .opinion .contenedor figure{
+        width: 85%;
+    }
+}
